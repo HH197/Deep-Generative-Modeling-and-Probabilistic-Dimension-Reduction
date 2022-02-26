@@ -1,1 +1,3 @@
 Here, I have re-implemented the [scVI](https://www.nature.com/articles/s41592-018-0229-2) tool developed by Lopez *et al*. scVI is based on a hierarchical Bayesian model with conditional distributions specified by deep neural networks, which can be trained very efficiently even for very large datasets. I will use [Pyro](https://pyro.ai/), [PyTorch Lightning](https://www.pytorchlightning.ai/), and Pytorch to re-implement their implementation. Using these libraries has resulted in fewer lines of code, more efficiency, and reliability.
+
+The Colab notebook contains a short report of my implementation, interpretations, and testing.
