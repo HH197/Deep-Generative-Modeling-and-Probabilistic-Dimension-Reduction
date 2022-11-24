@@ -23,7 +23,7 @@ In the scVI, $Y_{ij}$, the expression count of gene $j$ in sample $i$ of matrix 
 
 $$f_{\mathrm{ZINB}}(y;\mu ,\theta ,\pi ) = \pi \delta _0(y) + (1 - \pi ) f_{\mathrm{NB}}(y;\mu ,\theta ),\quad \forall y \in {\mathbb N}$$
 
-where $f_{\mathrm{NB}}$ is: 
+where $\pi \in [0,1]$, representting the probability that a 0 is observed instead of the actual count, $\delta_0(.)$ is the Dirac function, and $f_{\mathrm{NB}}$ is the probability mass function (PMF) of the negative binomial (NB) distribution with mean $\mu$ and inverse dispersion parameter $\theta$: 
 
 $$f_{\mathrm{NB}}(y;\mu ,\theta ) = \frac{{{{\Gamma }}(y + \theta )}}{{{{\Gamma }}(y + 1){{\Gamma }}(\theta )}}\left( {\frac{\theta }{{\theta + \mu }}} \right)^\theta \left( {\frac{\mu }{{\mu + \theta }}} \right)^y,\quad \forall y \in {\mathbb N}$$
 
