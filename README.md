@@ -17,7 +17,7 @@ Applying the appropriate computational and statistical techniques is essential t
 Here, I have re-engineered the implementation of the [scVI](https://www.nature.com/articles/s41592-018-0229-2) tool, developed at the University of Berkeley, using [Pyro](https://pyro.ai/), [PyTorch Lightning](https://www.pytorchlightning.ai/), and Pytorch resulted in fewer lines of code, more efficiency, and reliability. scVI is a general dimension reduction and data imputation tool which can be trained efficiently for large datasets.
 
 ## scVI
-scVI is a variational autoencoder with latent variables specified by normal distributions and generates estimations of the Zero-Inflated Negative Binomial (ZINB) distribution parameters through a nonlinear transformation of data. Lopez *et al.* showed that scVI captures meaningful biological information through nonlinear transformation and is scalable from tens of thousands of cells to a million. 
+scVI is a variational autoencoder with latent variables specified by Normal distribution and generates estimations of the Zero-Inflated Negative Binomial (ZINB) distribution parameters through a nonlinear transformation of data. Lopez *et al.* showed that scVI captures meaningful biological information through nonlinear transformation and is scalable from tens of thousands of cells to a million. 
 
 In the scVI, $Y_{ij}$, the expression count of gene $j$ in sample $i$ of matrix $Y$, is modeled as a random variable following the ZINB distribution. The ZINB distribution is as follows: 
 
