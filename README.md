@@ -1,10 +1,11 @@
 # Deep Generative Modeling and Probabilistic Dimension Reduction
 
-RNA sequencing (RNA-seq), which helps examine cellular responses, allows for quantitative gene expression analysis in a biological sample. In recent years, RNA-seq has driven medical innovation and discovery. The approach is often applied to samples containing tens of thousands to millions of cells for practical reasons. However, this has prevented direct assessment of the cell, the fundamental unit of life. As a result, the sequencing process was applied to individual cells, called single-cell RNA-eq (scRNA-seq). The opportunities arising from single-cell sequencing (sc-seq) are enormous. However, with the huge number of samples and the high level of resolution, scRNA-seq data pose unique and new challenges. 
+RNA-seq is a way to measure our body's gene expression. In recent years, RNA-seq has driven medical innovation and discovery. The approach is often applied to tissues containing tens of thousands to millions of cells. However, this has prevented direct assessment of the cells within the tissue. As a result, the sequencing process was applied to individual cells, called single-cell RNA-eq, instead of tissues. The opportunities arising from single-cell RNA-eq are enormous, but its data pose unique and new challenges. 
+
 
 ## Challenges in analyzing Single-cell RNA-eq data 
 
-- Sparsity and dropout: the scRNA-seq data are sparse and typically have a high percentage of observed zeros. The zeros in the scRNA-seq are typically from two sources. One is biological, where a gene is not expressed (the count is zero), and the other is technical, where a gene is expressed but not detected through sequencing, which is called "dropout."
+- Sparsity and dropout: the scRNA-seq data are sparse and typically have a high percentage of observed zeros. The zeros in the scRNA-seq are typically from two sources. One is biological, where a gene is not expressed (the count is zero), and the other is technical, where a gene is expressed but not detected in the experiment, called "dropout."
 - Batch effect: operational limitations cause the data to be generated separately (at different times or in various laboratories) for large-scale studies. Consequently, there will be differences between distinctive groups. These differences are not due to biological reasons and are technical errors that happen when cells from one group are processed separately from cells in a second group.
 - Unlabeled samples: cell types are undetermined and have to be labeled during the analyses.
 - Curse of dimensionality: in a typical single-cell experiment, each cell (sample) could have more than 20,000 genes (features).
