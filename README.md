@@ -31,4 +31,14 @@ The $\pi$ is essentially the probability of dropouts which is a common issue in 
 
 scVI uses a Bayesian approach in which the probability of observing $Y_{ij}$ is $p(Y_{ij}{\mathrm{|}}z_i,s_i,\ell_i)$, where $s_i$ is the batch annotation of each cell, and $\ell_i$ and $z_i$ are the latent variables. The $\ell_i$ is a variable following a Gaussian distribution with a dimension of one which captures technical variations. On the other hand, $z_i$ is a multi-dimensional latent variable following a Gaussian distribution that captures biological variations. The overall structure of the scVI has two parts: the Variational posterior and Generative model. The Variational posterior consists of multiple fully-connected Neural Networks (NNs) to transform the gene expression count into two latent variables ( $\ell_i$ and $z_i$ ). The Generative model part contains several fully-connected NNs which generate $\pi_i$, $\mu_i$, and $\theta_i$, the parameters of ZINB distribution, from the latent variables ( $\ell_i$ and $z_i$ ) and batch annotations ( $s_i$ ).
 
+Lopez *et al.* used the stochastic gradient-descent to optimize the objective function and find the parameters of their model. Therefore, they do not need to go over the entire dataset, and it enabled them to use GPU acceleration for parameter estimation.
+
+## How does scVI address the challenges in analyzing Single-cell RNA-eq data? 
+
+- **Dropout and count nature of the data:** Using the ZINB distribution as described above. 
+- **Batch effect:** Using $s_i$ variable. 
+- **Unlabeled samples:** Using K-means clustering of samples.
+- **Curse of dimensionality:** By learning representations of the data through $z_i$, a multi-dimensional latent variable following a Gaussian distribution.
+- **Scalability:** By stochastic gradient-descent optimization procedure.
+
 The Colab notebook contains a short report of my implementation, interpretations, and results.
