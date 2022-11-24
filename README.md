@@ -27,6 +27,8 @@ where $\pi \in [0,1]$, representting the probability that a 0 is observed instea
 
 $$f_{\mathrm{NB}}(y;\mu ,\theta ) = \frac{{{{\Gamma }}(y + \theta )}}{{{{\Gamma }}(y + 1){{\Gamma }}(\theta )}}\left( {\frac{\theta }{{\theta + \mu }}} \right)^\theta \left( {\frac{\mu }{{\mu + \theta }}} \right)^y,\quad \forall y \in {\mathbb N}$$
 
+The $\pi$ is essentially the probability of dropouts which is a common issue in scRNA-seq data, and the NB distribution is effective in modeling the count nature of the data. Therefore, the ZINB distribution can be effective in modeling the scRNA-seq data. 
+
 scVI uses a Bayesian approach in which the probability of observing $Y_{ij}$ is $p(Y_{ij}{\mathrm{|}}z_i,s_i,\ell_i)$, where $s_i$ is the batch annotation of each cell, and $\ell_i$ and $z_i$ are the latent variables. The $\ell_i$ is a variable following a Gaussian distribution with a dimension of one which captures technical variations. On the other hand, $z_i$ is a multi-dimensional variable following a Gaussian distribution that captures biological variations. The overall structure of the scVI has two parts: the Variational posterior and Generative model. The Variational posterior consists of multiple fully-connected Neural Networks (NNs) to transform the gene expression count into two latent variables ( $\ell_i$ and $z_i$ ). The Generative model part contains several fully-connected NNs which generate $\pi_i$, $\mu_i$, and $\theta_i$, the parameters of ZINB distribution, from the latent variables ( $\ell_i$ and $z_i$ ) and batch annotations ( $s_i$ ).
 
 The Colab notebook contains a short report of my implementation, interpretations, and results.
