@@ -37,7 +37,7 @@ Lopez *et al.* used the stochastic gradient-descent to optimize the objective fu
 
 - **Dropout and count nature of the data:** Using the ZINB distribution as described above. 
 - **Batch effect:** Using $s_i$ variable. 
-- **Unlabeled samples:** Using K-means clustering of samples.
+- **Unlabeled samples:** Using K-means on latent variable $z_i$ for clustering. 
 - **Curse of dimensionality:** By learning representations of the data through $z_i$, a multi-dimensional latent variable following a Gaussian distribution.
 - **Scalability:** By stochastic gradient-descent optimization procedure.
 
