@@ -21,7 +21,7 @@ scVI is a variational autoencoder with latent variables specified by normal dist
 
 In the scVI, $Y_{ij}$, the expression count of gene $j$ in sample $i$ of matrix $Y$, is modeled as a random variable following the ZINB distribution. The ZINB distribution is as follows: 
 
-$$f_{\mathrm{ZINB}}(y;\mu ,\theta ,\pi ) = \pi \delta _0(y) + (1 - \pi ) f_{NB} (y;\mu ,\theta ),\quad \forall y \in {\mathbb N}$$
+$$f_{\mathrm{ZINB}}(y;\mu ,\theta ,\pi ) = \pi \delta _0(y) + (1 - \pi ) f_{\mathrm{NB}}(y;\mu ,\theta ),\quad \forall y \in {\mathbb N}$$
 
 where $f_{\mathrm{NB}}$ is: 
 
