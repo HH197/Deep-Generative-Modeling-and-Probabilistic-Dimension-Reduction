@@ -1,6 +1,6 @@
 # Deep Generative Modeling and Probabilistic Dimension Reduction
 
-RNA-seq is a way to measure our body's gene expression. In recent years, RNA-seq has driven medical innovation and discovery. The approach is often applied to tissues containing tens of thousands to millions of cells. However, this has prevented direct assessment of the cells within the tissue. As a result, the sequencing process was applied to individual cells, called single-cell RNA-eq, instead of tissues. The opportunities arising from single-cell RNA-eq are enormous, but its data pose unique and new challenges. 
+RNA-seq is a way to measure our body's gene expression and has driven medical innovation and discovery in recent years. The approach is often applied to tissues containing tens of thousands to millions of cells. However, this has prevented direct assessment of the cells within the tissue. As a result, the sequencing process was applied to individual cells, called single-cell RNA-eq, instead of tissues. The opportunities arising from single-cell RNA-eq are enormous, but its data pose unique and new challenges. 
 
 
 ## Challenges in analyzing Single-cell RNA-eq data 
