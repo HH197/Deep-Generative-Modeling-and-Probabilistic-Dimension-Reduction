@@ -12,7 +12,7 @@ RNA-seq is a way to measure our body's gene expression and has driven medical in
 - **Count data:** The count nature of the data has to be considered in the analyses; i.e., the measurements are integers and not floating point numbers.
 - **Scalability:** Analyzing the ever-growing number of cells (samples), ranging from thousands to millions in large projects like the Human Cell Atlas, is a major challenge in scRNA-seq data analysis. Many statistical and machine learning methods developed for scRNA-seq fail to scale to more than 30,000 samples.
 
-Applying the appropriate computational and statistical techniques is essential to ensuring that scRNA-seq data are used efficiently and interpreted correctly. Consequently, many statistical and machine learning models have been developed to analyze scRNA-seq data. 
+Applying the appropriate computational and statistical techniques is essential for efficient use and correct interpretations of the data. Consequently, many statistical and machine learning models have been developed to analyze scRNA-seq data.
 
 Here, I have re-engineered the implementation of the [scVI](https://www.nature.com/articles/s41592-018-0229-2) tool, developed at the University of Berkeley, using [Pyro](https://pyro.ai/), [PyTorch Lightning](https://www.pytorchlightning.ai/), and Pytorch resulted in fewer lines of code, more efficiency, and reliability. scVI is a general dimension reduction and data imputation tool which can be trained efficiently for large datasets.
 
